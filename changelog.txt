@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2026-10-23
+  Compatibility:
+    - Remove obsolete prototype fields ignored by Factorio 2.1, preserving current recipes and balance.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2026-10-23
   Compatibility:
