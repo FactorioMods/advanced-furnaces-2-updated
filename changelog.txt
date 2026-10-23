@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2026-10-23
+  Bugfixes:
+    - Keep optional loaders compatible with Miniloader internal loaders when using default startup settings.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 2026-10-23
   Compatibility:
