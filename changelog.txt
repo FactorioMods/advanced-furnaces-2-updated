@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2026-10-24
+  Bugfixes:
+    - Fix in-game changelog parsing.
+    - Move the original mod history to docs/UPSTREAM-CHANGELOG.txt to avoid duplicate versions and unsupported formatting.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 2026-10-23
   Bugfixes:
@@ -17,31 +24,3 @@ Date: 2026-10-23
     - Declare Factorio 2.1 compatibility.
     - Migrate recipe definitions and legacy recipe matching to category lists.
     - Use underground_belt_neighbour for connected underground endpoints.
-
------0.2.13-----
-extends upper limit of wood to coal ratio from 100 to 200
------0.2.12-----
-fix locale for new settings option
------0.2.11-----
-fix some translation issues, rebanlance wood to coal recipe
------0.2.10-----
-fix pt-BR language folder name
------0.2.9-----
-fix no pollution error
-add pt-BR locale credit [@duhyukora](https://mods.factorio.com/user/duhyukora)
------0.2.8-----
-fix name error
------0.2.7-----
-fix fix error while load to an old save
-fix capatibility issues with aai-loders
------0.2.6-----
-fix error while load to an old save
------0.2.5-----
-fix pipe connection positions
------0.2.4-----
-fix startup error.
------2.3-----
-adapted to factorion 2.0
-added module slot, 4, 6, 8, 12, 16 according to 5 furnace
------1.2-----
-new input fluid posstions.

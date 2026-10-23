@@ -1,27 +1,21 @@
-# Factorio 2.1 compatibility and verified tests
+# Factorio 2.1 notes
 
-Current release: **1.0.2**. Engine/API target: **Factorio 2.1.23**. Updated 2026-10-23.
+Tested with **Factorio 2.1.23**. Current fork version: **1.0.3**.
 
-## API and compatibility changes
+## Changes
 
-- Add the transport_belt collision layer to optional loaders so default settings load alongside Miniloader internal loaders.
-- Declare Factorio 2.1 compatibility.
-- Use recipe category lists in recipe definitions and legacy recipe matching.
-- Use underground_belt_neighbour for connected underground endpoints.
-- Remove obsolete prototype fields ignored by Factorio 2.1, preserving current recipes and balance.
+- Updated recipe category lists and underground-belt neighbour lookup.
+- Fixed optional loader collision masks for Miniloader compatibility.
+- Fixed in-game changelog parsing; original entries are preserved in docs/UPSTREAM-CHANGELOG.txt.
 
-The audit used the installed runtime/prototype schemas and reviewed removed members, read-only writes, changed signatures, defines and named table arguments. Indirect calls and optional branches require manual review; this is not a formal proof of every execution path.
+## Tests
 
-## Mod-specific checks
+- All five tiers smelted 100 iron ore into 100 plates on powered networks.
+- Outputs survived save, restart and client rejoin; the test passed again after reload.
+- Default optional-loader settings loaded alongside the Miniloader fork.
 
-All five furnace-pro tiers each smelted 100 iron ore into 100 iron plates on real electric networks with a connected client. Saved output inventories survived restart/rejoin and production passed again. Default optional logistics also loaded on both host and graphical client alongside Miniloader; the loader collision-mask regression was fixed.
+Optional overhaul recipe integrations were not all tested.
 
-## Shared save and multiplayer checks
+Tests used private copies of saves and local host/client sessions. Raw player data and test hooks are not shipped.
 
-The final enabled mod set passed isolated map creation, copied-save migration, bridge-free save/reload and 3,000-tick behavior/simulation checks. Matching clean release archives also passed a real localhost host/client join, 30 seconds of simulation, server save/restart, client rejoin and another 30 seconds plus save, without a detected desync. The direct multiplayer feature assertions above are separate from this earlier shared smoke coverage.
-
-## Scope and limits
-
-Covers iron smelting at the installed settings and default optional-loader compatibility, not every alternate smelting recipe, loader throughput, setting multiplier or overhaul. WAN and long-duration stability were not tested.
-
-Targeted API/interaction fixtures used temporary private hooks where needed. Those hooks, raw saves, profiles, credentials and logs are excluded from public source and release ZIPs. The current release ZIP is identified by the digest on its GitHub release asset. Runtime code and private fixtures are kept separate.
+The 1.0.3 patch changes changelog text and version metadata only; the feature tests above apply to the unchanged gameplay code.
