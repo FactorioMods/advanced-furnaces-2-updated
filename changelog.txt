@@ -1,9 +1,11 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.2
+Version: 1.1.3
 Date: 2026-10-29
   Features:
     - Add optional research progression, configurable steel yield and additional ore smelting.
-    - Update furnace textures and icons; add Spanish translation.
+    - Update furnace textures and icons.
+    - Add localized furnace names, settings and descriptions for all 50 bundled game locales.
+    - Correct recipe and setting descriptions.
   Bugfixes:
     - Fix wagon loader transfers, quality filters, item metadata and direction handling.
     - Preserve loader registrations after saving and reloading.

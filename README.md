@@ -7,6 +7,7 @@ Five high-throughput electric furnace tiers with matching conveyors and loaders 
 - Configurable steel yield and optional direct steel recipes for suitable modded ores.
 - Wagon loaders with quality-aware filters and stack metadata support.
 - Updated furnace artwork and matching belt and loader graphics.
+- Localized names, settings and descriptions for all 50 bundled game locales.
 
 ## Installation and settings
 
@@ -18,4 +19,4 @@ Wagon loading and additional ore smelting are disabled by default. Wagon loading
 
 ## Credits
 
-Original work by fartdog and LightningMaster. Progression presets and Spanish translation adapted from rodrigoalag's release. See [attribution](ATTRIBUTION.md).
+Original work by fartdog and LightningMaster. Progression presets adapted from rodrigoalag's release. See [attribution](ATTRIBUTION.md).
