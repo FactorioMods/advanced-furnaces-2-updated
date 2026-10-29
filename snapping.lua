@@ -40,39 +40,39 @@ local function snap_loader_to_target(loader, entity, event)
     local direction = loader.direction
     local loader_type = loader.loader_type
 
-    if loader.direction == 0 or loader.direction == 4 then -- loader and entity are aligned vertically
+    if loader.direction == defines.direction.north or loader.direction == defines.direction.south then -- loader and entity are aligned vertically
         if loader.position.y > entity.position.y then
-            if entity.direction == 4 then
-                direction = 4
+            if entity.direction == defines.direction.south then
+                direction = defines.direction.south
                 loader_type = "input"
             else
-                direction = 0
+                direction = defines.direction.north
                 loader_type = "output"
             end
         elseif loader.position.y < entity.position.y then
-            if entity.direction == 0 then
-                direction = 0
+            if entity.direction == defines.direction.north then
+                direction = defines.direction.north
                 loader_type = "input"
             else
-                direction = 4
+                direction = defines.direction.south
                 loader_type = "output"
             end
         end
     else -- loader and entity are aligned horizontally
         if loader.position.x > entity.position.x then
-            if entity.direction == 2 then
-                direction = 2
+            if entity.direction == defines.direction.east then
+                direction = defines.direction.east
                 loader_type = "input"
             else
-                direction = 6
+                direction = defines.direction.west
                 loader_type = "output"
             end
         elseif loader.position.x < entity.position.x then
-            if entity.direction == 6 then
-                direction = 6
+            if entity.direction == defines.direction.west then
+                direction = defines.direction.west
                 loader_type = "input"
             else
-                direction = 2
+                direction = defines.direction.east
                 loader_type = "output"
             end
         end
@@ -101,7 +101,7 @@ end
 local function find_entity_by_loader(loader)
     local lbox = loader.prototype.selection_box
     local check
-    if loader.direction == 0 or loader.direction == 4 then
+    if loader.direction == defines.direction.north or loader.direction == defines.direction.south then
         check = {
             {loader.position.x -.4, loader.position.y + lbox.left_top.y -1},
             {loader.position.x +.4, loader.position.y + lbox.right_bottom.y +1}
@@ -118,6 +118,7 @@ end
 -- called when entity was rotated or non loader was built
 function snapping.check_for_loaders(event, supported_loader_names)
     local entity = event.created_entity or event.entity
+    if not entity or not entity.valid or #supported_loader_names == 0 then return end
     if snapTypes[entity.type] then
         local loaders = find_loader_by_entity(entity, supported_loader_names)
         for _, loader in pairs(loaders) do

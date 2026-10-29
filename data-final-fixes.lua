@@ -1,3 +1,6 @@
+require("prototypes.furnaces.space-exploration")
+require("prototypes.furnaces.research-presets")()
+require("prototypes.furnaces.ore-recipes")
 local crafting = settings.startup["load-furn-crafting-speed"].value
 
 for k=1,5 do
@@ -160,3 +163,6 @@ end
     end
 
 end
+
+require("prototypes.belt.finalize-loaders")()
+require("prototypes.furnaces.graphics")

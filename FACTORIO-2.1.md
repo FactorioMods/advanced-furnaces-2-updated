@@ -1,21 +1,16 @@
-# Factorio 2.1 notes
+# Validation
 
-Tested with **Factorio 2.1.23**. Current fork version: **1.0.3**.
+Tested with Factorio 2.1.23. The functional tests cover the current furnace and loader implementation.
 
-## Changes
+- **Furnaces:** all five tiers smelted with native inserter feeding. Physical fluid connections, speed modules, day/night rendering, heat effects, idle states and low power were checked.
+- **Conveyors:** native item flow and rendered playback covered both custom tiers, cardinal directions, corners, splitters, underground belts and loader input/output. Bundled loaders and Miniloader Redux PRO variants transferred items at matching belt speeds.
+- **Construction:** native rotation and actual robot construction covered every bundled loader tier, four rotations, horizontal/vertical mirroring and both loader modes.
+- **Multiplayer:** wagon loading, quality filters, partial ammunition stacks and loader registrations were checked with a connected client, followed by server restart and client rejoin without desync.
+- **Recipes and settings:** base/Space Age profiles, missing-expansion fallbacks, steel yields and additional-ore recipe safeguards were checked. Default furnace balance was compared with the previous release.
+- **Saves:** an existing save was upgraded and reloaded; compared entity and player state was preserved. Full mod-set consistency simulations also passed.
 
-- Updated recipe category lists and underground-belt neighbour lookup.
-- Fixed optional loader collision masks for Miniloader compatibility.
-- Fixed in-game changelog parsing; original entries are preserved in docs/UPSTREAM-CHANGELOG.txt.
+## Limits
 
-## Tests
+Settings toggles were tested separately from multiplayer. Fluid connections were checked on every tier facing north and on the first tier in all cardinal directions. The save comparison did not include tier-five furnaces, stored fluids or non-normal-quality furnaces.
 
-- All five tiers smelted 100 iron ore into 100 plates on powered networks.
-- Outputs survived save, restart and client rejoin; the test passed again after reload.
-- Default optional-loader settings loaded alongside the Miniloader fork.
-
-Optional overhaul recipe integrations were not all tested.
-
-Tests used private copies of saves and local host/client sessions. Raw player data and test hooks are not shipped.
-
-The 1.0.3 patch changes changelog text and version metadata only; the feature tests above apply to the unchanged gameplay code.
+Complete overhaul campaigns, arbitrary modded item metadata, diagonal wagon loading, underground side-loading, circuit wire interactions and splitter filters/priorities were not exhaustively tested. Rendered animation checks used sampled playback.

@@ -1,6 +1,30 @@
 data:extend({
     {
         type = "bool-setting",
+        name = "load-furn-extra-smelting",
+        setting_type = "startup",
+        default_value = false,
+        order = "b-1-2"
+    },
+    {
+        type = "string-setting",
+        name = "load-furn-balance-mode",
+        setting_type = "startup",
+        default_value = "unbalanced",
+        allowed_values = {"unbalanced", "vanilla", "space-age", "space-exploration", "sesa"},
+        order = "a-1"
+    },
+    {
+        type = "int-setting",
+        name = "load-furn-steel-yield",
+        setting_type = "startup",
+        default_value = 1,
+        minimum_value = 1,
+        maximum_value = 100,
+        order = "b-1-1"
+    },
+    {
+        type = "bool-setting",
         name = "load-furn-easy-research",
         setting_type = "startup",
         default_value = false,

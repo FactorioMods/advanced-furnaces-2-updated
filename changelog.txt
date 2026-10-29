@@ -1,26 +1,13 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.0.3
-Date: 2026-10-24
+Version: 1.1.2
+Date: 2026-10-29
+  Features:
+    - Add optional research progression, configurable steel yield and additional ore smelting.
+    - Update furnace textures and icons; add Spanish translation.
   Bugfixes:
-    - Fix in-game changelog parsing.
-    - Move the original mod history to docs/UPSTREAM-CHANGELOG.txt to avoid duplicate versions and unsupported formatting.
-
----------------------------------------------------------------------------------------------------
-Version: 1.0.2
-Date: 2026-10-23
-  Bugfixes:
-    - Keep optional loaders compatible with Miniloader internal loaders when using default startup settings.
-
----------------------------------------------------------------------------------------------------
-Version: 1.0.1
-Date: 2026-10-23
+    - Fix wagon loader transfers, quality filters, item metadata and direction handling.
+    - Preserve loader registrations after saving and reloading.
+    - Match loader graphics and speeds to their belts.
   Compatibility:
-    - Remove obsolete prototype fields ignored by Factorio 2.1, preserving current recipes and balance.
-
----------------------------------------------------------------------------------------------------
-Version: 1.0.0
-Date: 2026-10-23
-  Compatibility:
-    - Declare Factorio 2.1 compatibility.
-    - Migrate recipe definitions and legacy recipe matching to category lists.
-    - Use underground_belt_neighbour for connected underground endpoints.
+    - Update prototypes, conveyor connectors and underground belt handling for Factorio 2.1.
+    - Prevent conflicting Advanced Furnaces versions from loading together.
