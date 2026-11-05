@@ -1,5 +1,12 @@
 data:extend({
     {
+        type = "bool-setting",
+        name = "load-furn-extra-smelting",
+        setting_type = "startup",
+        default_value = false,
+        order = "b-1-2"
+    },
+    {
         type = "string-setting",
         name = "load-furn-balance-mode",
         setting_type = "startup",
