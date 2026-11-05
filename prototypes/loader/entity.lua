@@ -25,6 +25,8 @@ function loader_pro(data)
         collision_mask = {
             layers = {
                 item = true,
+                -- Loader connection checks require collision with internal belt-only loaders.
+                transport_belt = true,
                 meltable = true,
                 object = true,
                 player = true,
