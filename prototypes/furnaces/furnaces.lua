@@ -60,8 +60,6 @@ local icon = data.icon
 local icons = data.icons
 local pollution = data.pollution
 
-
-
 -- crafting_categories = {"smelting", "AdvFurn", "mixing-furnace","crafting", "oil-processing", "chemistry", "crafting-with-fluid"}
 crafting_categories = {"smelting", "AdvFurn", "mixing-furnace"}
 angelssmelting = {"blast-smelting" ,"blast-smelting-2" ,"blast-smelting-3" ,"blast-smelting-4" ,"chemical-smelting" ,"chemical-smelting-2" ,"chemical-smelting-3" ,"chemical-smelting-4" ,"induction-smelting" ,"induction-smelting-2" ,"induction-smelting-3" ,"induction-smelting-4" ,"casting" ,"casting-2" ,"casting-3" ,"casting-4" ,"strand-casting" ,"strand-casting-2" ,"strand-casting-3" ,"strand-casting-4","sintering","sintering-2","sintering-3","sintering-4" }
@@ -93,8 +91,6 @@ if not mods["bobelectronics"] then
 end
 
 --table.foreach(y, function(k, v) table.insert(x, v) end)
- 
-
 
 --[[ shity code
 if mods["angelssmelting"] and not mods["bobelectronics"] then
@@ -110,7 +106,6 @@ else
 end
 ]]--
 
-
 return {
         type = "assembling-machine",
         name = name,
@@ -120,7 +115,7 @@ return {
         flags = {"placeable-neutral","placeable-player", "player-creation"},
         minable = {mining_time = 1, result = name},
         max_health = 500,
-        base_productivity = 0,
+
         corpse = "big-remnants",
         dying_explosion = "medium-explosion",
         resistances = {
@@ -134,7 +129,7 @@ return {
         crafting_categories = crafting_categories,
         fast_replaceable_group = "furnace",
         ingredient_count = 4,
-        result_count = 2,
+
         crafting_speed = crafting_speed,
         next_upgrade = next_upgrade,
         energy_usage = energy_usage,
@@ -201,10 +196,10 @@ return {
             usage_priority = "secondary-input",
             emissions_per_minute = { pollution = pollution }
         },
-        vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+
         working_sound = {
             sound = {filename = "__base__/sound/electric-furnace.ogg", volume = 0.7},
-            apparent_volume = 1.5
+
         },
 
 		graphics_set = {
