@@ -162,3 +162,4 @@ end
 end
 
 require("prototypes.belt.finalize-loaders")()
+require("prototypes.furnaces.graphics")
