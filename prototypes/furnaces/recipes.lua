@@ -104,7 +104,7 @@ icon_size = 64,
 enabled = enabl_steel_plate2,
 energy_required = 16,
 ingredients = {{type="item", name="iron-ore", amount=5}},
-results = {{type="item", name="steel-plate", amount=1}},
+results = {{type="item", name="steel-plate", amount=settings.startup["load-furn-steel-yield"].value}},
 
 localised_name = {"recipe-name.steel-plate"}
 }
