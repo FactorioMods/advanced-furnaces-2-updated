@@ -160,3 +160,5 @@ end
     end
 
 end
+
+require("prototypes.belt.finalize-loaders")()

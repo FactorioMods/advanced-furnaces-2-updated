@@ -395,6 +395,7 @@ if settings.startup["logist"].value == true then
         {
             type = "transport-belt",
             name = "transport-belt-pro",
+            related_underground_belt = "underground-belt-pro",
             localised_name = {"",{"entity-name.express-transport-belt"}, " PRO-1"},
             icon = "__advanced-furnaces-2-updated__/graphics/icons/transport-belt-pro.png",
             icon_size = 32,
@@ -421,29 +422,18 @@ if settings.startup["logist"].value == true then
                 max_sounds_per_type = 3
             },
             animation_speed_coefficient = 32,
-            animations =
-            {
-                    filename = "__advanced-furnaces-2-updated__/graphics/entity/transport-belt-pro.png",
-                    priority = "extra-high",
-                    width = 80,
-                    height = 80,
-                    frame_count = 32,
-                    line_length = 16,
-                    direction_count = 12,
-                    scale = 0.5
-            },
             belt_animation_set = transport_belt_pro_animation_set,
             fast_replaceable_group = "transport-belt",
             next_upgrade = "transport-belt-pro2",
             speed = data.raw['transport-belt']['transport-belt'].speed*5,
             connector_frame_sprites = transport_belt_connector_frame_sprites,
-            circuit_wire_connection_points = circuit_connector_definitions["belt"].points,
-            circuit_connector_sprites = circuit_connector_definitions["belt"].sprites,
+            circuit_connector = table.deepcopy(circuit_connector_definitions["belt"]),
             circuit_wire_max_distance = transport_belt_circuit_wire_max_distance
         },
          {
             type = "transport-belt",
             name = "transport-belt-pro2",
+            related_underground_belt = "underground-belt-pro2",
             localised_name = {"",{"entity-name.express-transport-belt"}, " PRO-2"},
             icon = "__advanced-furnaces-2-updated__/graphics/icons/transport-belt-pro2.png",
             icon_size = 32,
@@ -470,24 +460,12 @@ if settings.startup["logist"].value == true then
                 max_sounds_per_type = 3
             },
             animation_speed_coefficient = 32,
-            animations =
-            {
-                    filename = "__advanced-furnaces-2-updated__/graphics/entity/transport-belt-pro2.png",
-                    priority = "extra-high",
-                    width = 80,
-                    height = 80,
-                    frame_count = 32,
-                    line_length = 16,
-                    direction_count = 12,
-                    scale = 0.5
-            },
             belt_animation_set = transport_belt_pro2_animation_set,
             fast_replaceable_group = "transport-belt",
             next_upgrade = nil,
             speed = data.raw['transport-belt']['transport-belt'].speed*7,
             connector_frame_sprites = transport_belt_connector_frame_sprites,
-            circuit_wire_connection_points = circuit_connector_definitions["belt"].points,
-            circuit_connector_sprites = circuit_connector_definitions["belt"].sprites,
+            circuit_connector = table.deepcopy(circuit_connector_definitions["belt"]),
             circuit_wire_max_distance = transport_belt_circuit_wire_max_distance
         }
     })
