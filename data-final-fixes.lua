@@ -1,3 +1,4 @@
+require("prototypes.furnaces.research-presets")()
 local crafting = settings.startup["load-furn-crafting-speed"].value
 
 for k=1,5 do

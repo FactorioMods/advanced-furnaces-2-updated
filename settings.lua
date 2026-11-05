@@ -1,5 +1,13 @@
 data:extend({
     {
+        type = "string-setting",
+        name = "load-furn-balance-mode",
+        setting_type = "startup",
+        default_value = "unbalanced",
+        allowed_values = {"unbalanced", "vanilla", "space-age", "space-exploration", "sesa"},
+        order = "a-1"
+    },
+    {
         type = "bool-setting",
         name = "load-furn-easy-research",
         setting_type = "startup",
