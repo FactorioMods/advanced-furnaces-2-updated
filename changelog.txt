@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.3
-Date: 2026-10-29
+Version: 1.1.4
+Date: 2026-11-12
   Bugfixes:
+    - Recognize Loader Redux: Updated so its loaders keep their existing research unlocks without adding duplicate furnace loader unlocks.
     - Updated Factorio 2.1 prototypes and corrected loader collision, placement and belt-speed handling.
   Features:
     - Wagon transfer preserves item stack metadata and supports quality-aware whitelist and blacklist filters. Loader registrations survive save/load.

@@ -77,7 +77,7 @@ if settings.startup["logist"].value == true then
                  {type = "unlock-recipe", recipe = "underground-belt-pro2"})
     table.insert(data.raw.technology["furnace-pro-4"].effects,
                  {type = "unlock-recipe", recipe = "splitter-pro2"})
-    if not mods["LoaderRedux"] and not mods["Krastorio"] then
+    if not (mods["LoaderRedux"] or mods["loader-redux-updated"]) and not mods["Krastorio"] then
         table.insert(data.raw.technology["logistics"].effects,
                      {type = "unlock-recipe", recipe = "loader-pro-001"})
         table.insert(data.raw.technology["logistics-2"].effects,

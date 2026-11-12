@@ -2,10 +2,11 @@
 
 Five electric furnace tiers with matching conveyors and loaders.
 
-**Factorio 2.1 · Version 1.1.3**
+**Factorio 2.1 · Version 1.1.4**
 
 ## Fork changes
 
+- Preserve Loader Redux compatibility with both its original and updated mod names.
 - Updated Factorio 2.1 prototypes and corrected loader collision, placement and belt-speed handling.
 - Wagon transfer preserves item stack metadata and supports quality-aware whitelist and blacklist filters. Loader registrations survive save/load.
 - Optional vanilla and Space Age research profiles, with fallbacks when expansion science is unavailable.
